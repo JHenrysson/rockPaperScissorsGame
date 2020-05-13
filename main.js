@@ -10,6 +10,32 @@ window.onload = function() {
 
                 gameMove = prompt('Enter Move\n1. Rock\n2. Paper\n3. Scissors');
                 if (gameMove === '1' || gameMove === '2' || gameMove === '3') {
+                    let computerMove= Math.floor(Math.random() * 3) + 1;
+                    if(gameMove === '1'){
+                        if(computerMove === 1){
+                            alert("Tie!");
+                        }else if (computerMove === 2){
+                            alert("Computer Wins! Loser")
+                        }else {
+                            alert("You Win!")
+                        }
+                    }else if (gameMove === '2'){
+                        if (computerMove === 1){
+                            alert("You Win!");
+                        }else if( computerMove === 2){
+                            alert("Tie!");
+                        }else {
+                            alert("Computer Wins!")
+                        }
+                    } else {
+                        if(computerMove === 1){
+                            alert("Computer Wins!");
+                        }else if(computerMove === 2){
+                            alert("You Win!");
+                        }else {
+                            alert ("Tie!");
+                        }
+                    }
                 } else {
                     alert("Try Again!");
                 }
